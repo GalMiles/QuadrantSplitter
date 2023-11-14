@@ -6,13 +6,17 @@ function QuadrantSplitter() {
     const initialTree = new QuadTree(0,0, 400, 400, 400);
     const [quadTree, setQuadTree] = useState(initialTree);
 
+    //handling click and splitting the quadrant(meanning adding 4 childrens to node)
     const handleQuadrantClick = (e, node) => {
         e.stopPropagation();
         quadTree.split(node, e.clientX, e.clientY);
+        
+        //creating new tree with updated root
         const updatedTree = quadTree.cloneWithUpdatedRoot(quadTree.root);
         setQuadTree(updatedTree);
     };
 
+    //recursive function that renders the quadrants
     const renderQuadrants = (node) => {
         if (!node) return null;
 

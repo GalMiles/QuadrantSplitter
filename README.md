@@ -6,6 +6,7 @@ Using QuadTree data-structre.
 * Clone repo
 * Run 'npm install'
 * Run 'npm start'
+* Start clicking where you want to split into squares
 * Enjoy :grin:
 
 

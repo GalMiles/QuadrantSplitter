@@ -10,7 +10,7 @@ function QuadrantSplitter() {
     const handleQuadrantClick = (e, node) => {
         e.stopPropagation();
         quadTree.split(node, e.clientX, e.clientY);
-        
+
         //creating new tree with updated root
         const updatedTree = quadTree.cloneWithUpdatedRoot(quadTree.root);
         setQuadTree(updatedTree);
